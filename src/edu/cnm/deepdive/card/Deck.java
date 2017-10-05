@@ -3,6 +3,7 @@ package edu.cnm.deepdive.card;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
 
@@ -39,11 +40,17 @@ public class Deck {
 
   public void sort() {
     //sort(0, cards.size());
-      Collections.sort(cards)
+      Collections.sort(cards);
 
   }
+  public void sort(Comparator<Card> comp) {
+    Collections.sort(cards,comp);
+  }
+    //sort(0, cards.size());
 
-  private void sort(int start, int end) {
+
+
+    private void sort(int start, int end) {
     if (end <= start + 1) {
       return;
     }
